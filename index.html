@@ -1,1 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Suraj Yadav | WordPress Web Designer</title>
+    <meta name="description" content="Suraj Yadav - Professional WordPress, Elementor and WooCommerce Web Designer.">
+
+    <style>
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #080808;
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(8, 8, 8, 0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #242424;
+            z-index: 1000;
+        }
+
+        nav {
+            height: 75px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #c99a6b;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ccc;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #c99a6b;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 75px;
+            background:
+                radial-gradient(circle at 80% 30%, rgba(201,154,107,0.12), transparent 35%),
+                #080808;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .small-title {
+            color: #c99a6b;
+            font-size: 15px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 7vw, 82px);
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #c99a6b;
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: #aaa;
+            font-size: 18px;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #c99a6b;
+            color: #111;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            background: #dfb17f;
+        }
+
+        .btn-outline {
+            border: 1px solid #555;
+            color: #fff;
+        }
+
+        .btn-outline:hover {
+            border-color: #c99a6b;
+            color: #c99a6b;
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            margin-bottom: 50px;
+        }
+
+        .section-title .mini {
+            color: #c99a6b;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+        }
+
+        .section-title p {
+            color: #999;
+            margin-top: 10px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: #0d0d0d;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text p {
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+
+        .about-box {
+            border: 1px solid #292929;
+            padding: 35px;
+            background: #111;
+            border-radius: 10px;
+        }
+
+        .about-box h3 {
+            margin-bottom: 20px;
+            color: #c99a6b;
+        }
+
+        .about-box p {
+            color: #aaa;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .skill {
+            padding: 10px 17px;
+            background: #171717;
+            border: 1px solid #292929;
+            border-radius: 5px;
+            color: #ddd;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            padding: 35px;
+            background: #111;
+            border: 1px solid #242424;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            border-color: #c99a6b;
+        }
+
+        .service-number {
+            color: #c99a6b;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #999;
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects {
+            background: #0d0d0d;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #111;
+            border: 1px solid #292929;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+            border-color: #c99a6b;
+        }
+
+        .project-image {
+            height: 210px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:
+                linear-gradient(135deg, #191919, #25201b);
+            color: #c99a6b;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h3 {
+            margin-bottom: 10px;
+        }
+
+        .project-content p {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .project-link {
+            color: #c99a6b;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+
+        /* =========================
+           PROCESS
+        ========================= */
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .process-card {
+            text-align: center;
+            padding: 25px;
+        }
+
+        .process-card span {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            border: 1px solid #c99a6b;
+            border-radius: 50%;
+            color: #c99a6b;
+        }
+
+        .process-card p {
+            color: #999;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: #0d0d0d;
+        }
+
+        .contact-box {
+            text-align: center;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .contact-box h2 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            color: #999;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+            color: #aaa;
+        }
+
+        .contact-info a {
+            color: #c99a6b;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            border-top: 1px solid #242424;
+            padding: 30px 0;
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+        }
+
+        footer span {
+            color: #c99a6b;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid,
+            .projects-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+        }
+
+
+        @media (max-width: 650px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                text-align: left;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 75px 0;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+
+            .services-grid,
+            .projects-grid,
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-box h2 {
+                font-size: 34px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <header>
+        <div class="container">
+            <nav>
+
+                <a href="#home" class="logo">
+                    Suraj<span>.</span>
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <div class="small-title">
+                    WordPress Web Designer
+                </div>
+
+                <h1>
+                    I Build <span>Modern Websites</span> For Businesses.
+                </h1>
+
+                <p>
+                    Hi, I'm Suraj Yadav. I create clean, modern and
+                    professional websites using WordPress, Elementor
+                    and WooCommerce.
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#projects" class="btn btn-primary">
+                        View My Work
+                    </a>
+
+                    <a href="#contact" class="btn btn-outline">
+                        Contact Me
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <div class="mini">About Me</div>
+
+                <h2>Who I Am</h2>
+
+                <p>
+                    A beginner web designer focused on creating
+                    professional and useful websites.
+                </p>
+
+            </div>
+
+
+            <div class="about-grid">
+
+                <div class="about-text">
+
+                    <p>
+                        I'm Suraj Yadav, a WordPress web designer
+                        interested in creating modern websites for
+                        businesses, online stores and personal brands.
+                    </p>
+
+                    <p>
+                        I work with WordPress, Elementor and WooCommerce
+                        to create responsive websites with clean layouts
+                        and professional designs.
+                    </p>
+
+                    <p>
+                        I'm continuously learning and improving my
+                        web design and digital skills.
+                    </p>
+
+                </div>
+
+
+                <div class="about-box">
+
+                    <h3>My Skills</h3>
+
+                    <div class="skills">
+
+                        <div class="skill">WordPress</div>
+                        <div class="skill">Elementor</div>
+                        <div class="skill">WooCommerce</div>
+                        <div class="skill">HTML</div>
+                        <div class="skill">CSS</div>
+                        <div class="skill">Website Design</div>
+                        <div class="skill">Responsive Design</div>
+                        <div class="skill">Basic SEO</div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICES
+    ========================= -->
+
+    <section id="services">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <div class="mini">What I Do</div>
+
+                <h2>My Services</h2>
+
+                <p>
+                    Simple and professional web solutions for businesses
+                    and individuals.
+                </p>
+
+            </div>
+
+
+            <div class="services-grid">
+
+                <div class="service-card">
+
+                    <div class="service-number">01</div>
+
+                    <h3>WordPress Website</h3>
+
+                    <p>
+                        Professional WordPress websites for businesses,
+                        portfolios and personal brands.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-number">02</div>
+
+                    <h3>WooCommerce Store</h3>
+
+                    <p>
+                        Clean and responsive online stores for selling
+                        products online.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-number">03</div>
+
+                    <h3>Landing Pages</h3>
+
+                    <p>
+                        Modern landing pages designed to present
+                        products, services and businesses clearly.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================= -->
+
+    <section class="projects" id="projects">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <div class="mini">My Work</div>
+
+                <h2>Selected Projects</h2>
+
+                <p>
+                    Some of my website design and development projects.
+                </p>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+
+                <!-- PROJECT 1 -->
+
+                <div class="project-card">
+
+                    <div class="project-image">
+                        SURAJ MART
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Suraj Mart</h3>
+
+                        <p>
+                            E-commerce website concept created using
+                            WordPress, Elementor and WooCommerce.
+                        </p>
+
+                        <a href="#" class="project-link">
+                            View Project →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROJECT 2 -->
+
+                <div class="project-card">
+
+                    <div class="project-image">
+                        BEAUTY STORE
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Beauty Store</h3>
+
+                        <p>
+                            Modern product-focused website design for
+                            a beauty and lifestyle store.
+                        </p>
+
+                        <a href="#" class="project-link">
+                            View Project →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROJECT 3 -->
+
+                <div class="project-card">
+
+                    <div class="project-image">
+                        BUSINESS
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Business Website</h3>
+
+                        <p>
+                            Professional website concept designed for
+                            a business and service-based company.
+                        </p>
+
+                        <a href="#" class="project-link">
+                            View Project →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         WORK PROCESS
+    ========================= -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <div class="mini">My Process</div>
+
+                <h2>How I Work</h2>
+
+            </div>
+
+
+            <div class="process-grid">
+
+                <div class="process-card">
+
+                    <span>01</span>
+
+                    <h3>Discuss</h3>
+
+                    <p>
+                        Understand the project and requirements.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <span>02</span>
+
+                    <h3>Plan</h3>
+
+                    <p>
+                        Plan the layout, structure and design.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <span>03</span>
+
+                    <h3>Build</h3>
+
+                    <p>
+                        Create the website using WordPress and Elementor.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <span>04</span>
+
+                    <h3>Deliver</h3>
+
+                    <p>
+                        Test the website and deliver the final project.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section class="contact" id="contact">
+
+        <div class="container">
+
+            <div class="contact-box">
+
+                <div class="small-title">
+                    Get In Touch
+                </div>
+
+                <h2>
+                    Have a Project in Mind?
+                </h2>
+
+                <p>
+                    Let's discuss your website idea and create
+                    something professional together.
+                </p>
+
+
+                <div class="buttons" style="justify-content:center;">
+
+                    <!-- Replace # with your Fiverr profile URL -->
+
+                    <a href="#" class="btn btn-primary">
+                        Hire Me on Fiverr
+                    </a>
+
+                    <a href="mailto:your@email.com"
+                       class="btn btn-outline">
+                        Email Me
+                    </a>
+
+                </div>
+
+
+                <div class="contact-info">
+
+                    Email:
+                    <a href="mailto:your@email.com">
+                        your@email.com
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="container">
+
+            © 2026 Suraj Yadav. All Rights Reserved.
+
+            <br>
+
+            <span>WordPress Web Designer</span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        // Simple scroll effect
+
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+            link.addEventListener('click', function(e) {
+
+                const target = document.querySelector(
+                    this.getAttribute('href')
+                );
+
+                if (target) {
+
+                    e.preventDefault();
+
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+
+</body>
+</html>
