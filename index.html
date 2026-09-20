@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,13 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Suraj Yadav | WordPress Web Designer</title>
-    <meta name="description" content="Suraj Yadav - Professional WordPress, Elementor and WooCommerce Web Designer.">
+    <meta name="description" content="Suraj Yadav - WordPress, Elementor, WooCommerce and Digital Marketing Freelancer.">
 
     <style>
-        /* =========================
-           RESET
-        ========================= */
-
         * {
             margin: 0;
             padding: 0;
@@ -31,28 +28,19 @@
             color: inherit;
         }
 
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
         .container {
             width: 90%;
             max-width: 1150px;
             margin: auto;
         }
 
-
-        /* =========================
-           NAVBAR
-        ========================= */
-
+        /* NAVBAR */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(8, 8, 8, 0.92);
+            background: rgba(8, 8, 8, 0.94);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid #242424;
             z-index: 1000;
@@ -71,7 +59,12 @@
             letter-spacing: 1px;
         }
 
-        .logo span {
+        .logo span,
+        .small-title,
+        .section-title .mini,
+        .project-link,
+        .contact-info a,
+        footer span {
             color: #c99a6b;
         }
 
@@ -91,11 +84,7 @@
             color: #c99a6b;
         }
 
-
-        /* =========================
-           HERO
-        ========================= */
-
+        /* HERO */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -111,7 +100,6 @@
         }
 
         .small-title {
-            color: #c99a6b;
             font-size: 15px;
             letter-spacing: 3px;
             text-transform: uppercase;
@@ -169,11 +157,7 @@
             color: #c99a6b;
         }
 
-
-        /* =========================
-           SECTIONS
-        ========================= */
-
+        /* SECTIONS */
         section {
             padding: 100px 0;
         }
@@ -183,7 +167,6 @@
         }
 
         .section-title .mini {
-            color: #c99a6b;
             text-transform: uppercase;
             letter-spacing: 3px;
             font-size: 13px;
@@ -199,11 +182,7 @@
             margin-top: 10px;
         }
 
-
-        /* =========================
-           ABOUT
-        ========================= */
-
+        /* ABOUT */
         .about {
             background: #0d0d0d;
         }
@@ -232,15 +211,6 @@
             color: #c99a6b;
         }
 
-        .about-box p {
-            color: #aaa;
-        }
-
-
-        /* =========================
-           SKILLS
-        ========================= */
-
         .skills {
             display: flex;
             flex-wrap: wrap;
@@ -257,11 +227,7 @@
             font-size: 14px;
         }
 
-
-        /* =========================
-           SERVICES
-        ========================= */
-
+        /* SERVICES */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -296,11 +262,7 @@
             font-size: 15px;
         }
 
-
-        /* =========================
-           PROJECTS
-        ========================= */
-
+        /* PROJECTS */
         .projects {
             background: #0d0d0d;
         }
@@ -332,8 +294,10 @@
             background:
                 linear-gradient(135deg, #191919, #25201b);
             color: #c99a6b;
-            font-size: 28px;
+            font-size: 25px;
             font-weight: 700;
+            text-align: center;
+            padding: 20px;
         }
 
         .project-content {
@@ -351,16 +315,15 @@
         }
 
         .project-link {
-            color: #c99a6b;
             font-size: 14px;
             font-weight: 600;
         }
 
+        .project-link:hover {
+            color: #dfb17f;
+        }
 
-        /* =========================
-           PROCESS
-        ========================= */
-
+        /* PROCESS */
         .process-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -390,11 +353,7 @@
             margin-top: 8px;
         }
 
-
-        /* =========================
-           CONTACT
-        ========================= */
-
+        /* CONTACT */
         .contact {
             background: #0d0d0d;
         }
@@ -420,15 +379,11 @@
             color: #aaa;
         }
 
-        .contact-info a {
-            color: #c99a6b;
+        .contact-info a:hover {
+            color: #dfb17f;
         }
 
-
-        /* =========================
-           FOOTER
-        ========================= */
-
+        /* FOOTER */
         footer {
             border-top: 1px solid #242424;
             padding: 30px 0;
@@ -437,15 +392,7 @@
             font-size: 14px;
         }
 
-        footer span {
-            color: #c99a6b;
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
+        /* MOBILE */
         @media (max-width: 900px) {
 
             .about-grid {
@@ -465,7 +412,6 @@
                 gap: 15px;
             }
         }
-
 
         @media (max-width: 650px) {
 
@@ -499,17 +445,12 @@
                 font-size: 34px;
             }
         }
-
     </style>
 </head>
 
 <body>
 
-
-    <!-- =========================
-         NAVBAR
-    ========================= -->
-
+    <!-- NAVBAR -->
     <header>
         <div class="container">
             <nav>
@@ -531,10 +472,7 @@
     </header>
 
 
-    <!-- =========================
-         HERO
-    ========================= -->
-
+    <!-- HERO -->
     <section class="hero" id="home">
 
         <div class="container">
@@ -574,17 +512,16 @@
     </section>
 
 
-    <!-- =========================
-         ABOUT
-    ========================= -->
-
+    <!-- ABOUT -->
     <section id="about">
 
         <div class="container">
 
             <div class="section-title">
 
-                <div class="mini">About Me</div>
+                <div class="mini">
+                    About Me
+                </div>
 
                 <h2>Who I Am</h2>
 
@@ -613,7 +550,8 @@
                     </p>
 
                     <p>
-                        I'm continuously learning and improving my
+                        I have also completed my Digital Marketing
+                        learning and I'm continuously improving my
                         web design and digital skills.
                     </p>
 
@@ -634,6 +572,7 @@
                         <div class="skill">Website Design</div>
                         <div class="skill">Responsive Design</div>
                         <div class="skill">Basic SEO</div>
+                        <div class="skill">Digital Marketing</div>
 
                     </div>
 
@@ -646,17 +585,16 @@
     </section>
 
 
-    <!-- =========================
-         SERVICES
-    ========================= -->
-
+    <!-- SERVICES -->
     <section id="services">
 
         <div class="container">
 
             <div class="section-title">
 
-                <div class="mini">What I Do</div>
+                <div class="mini">
+                    What I Do
+                </div>
 
                 <h2>My Services</h2>
 
@@ -718,22 +656,22 @@
     </section>
 
 
-    <!-- =========================
-         PROJECTS
-    ========================= -->
-
+    <!-- PROJECTS -->
     <section class="projects" id="projects">
 
         <div class="container">
 
             <div class="section-title">
 
-                <div class="mini">My Work</div>
+                <div class="mini">
+                    My Work
+                </div>
 
                 <h2>Selected Projects</h2>
 
                 <p>
-                    Some of my website design and development projects.
+                    Demo and concept projects created to showcase
+                    my web design skills.
                 </p>
 
             </div>
@@ -743,7 +681,6 @@
 
 
                 <!-- PROJECT 1 -->
-
                 <div class="project-card">
 
                     <div class="project-image">
@@ -759,9 +696,9 @@
                             WordPress, Elementor and WooCommerce.
                         </p>
 
-                        <a href="#" class="project-link">
-                            View Project →
-                        </a>
+                        <span class="project-link">
+                            Demo Project
+                        </span>
 
                     </div>
 
@@ -769,7 +706,6 @@
 
 
                 <!-- PROJECT 2 -->
-
                 <div class="project-card">
 
                     <div class="project-image">
@@ -781,13 +717,13 @@
                         <h3>Beauty Store</h3>
 
                         <p>
-                            Modern product-focused website design for
+                            Modern product-focused website concept for
                             a beauty and lifestyle store.
                         </p>
 
-                        <a href="#" class="project-link">
-                            View Project →
-                        </a>
+                        <span class="project-link">
+                            Demo Project
+                        </span>
 
                     </div>
 
@@ -795,11 +731,10 @@
 
 
                 <!-- PROJECT 3 -->
-
                 <div class="project-card">
 
                     <div class="project-image">
-                        BUSINESS
+                        BUSINESS WEBSITE
                     </div>
 
                     <div class="project-content">
@@ -811,9 +746,9 @@
                             a business and service-based company.
                         </p>
 
-                        <a href="#" class="project-link">
-                            View Project →
-                        </a>
+                        <span class="project-link">
+                            Demo Project
+                        </span>
 
                     </div>
 
@@ -827,17 +762,16 @@
     </section>
 
 
-    <!-- =========================
-         WORK PROCESS
-    ========================= -->
-
+    <!-- WORK PROCESS -->
     <section>
 
         <div class="container">
 
             <div class="section-title">
 
-                <div class="mini">My Process</div>
+                <div class="mini">
+                    My Process
+                </div>
 
                 <h2>How I Work</h2>
 
@@ -904,10 +838,7 @@
     </section>
 
 
-    <!-- =========================
-         CONTACT
-    ========================= -->
-
+    <!-- CONTACT -->
     <section class="contact" id="contact">
 
         <div class="container">
@@ -930,13 +861,12 @@
 
                 <div class="buttons" style="justify-content:center;">
 
-                    <!-- Replace # with your Fiverr profile URL -->
-
+                    <!-- Fiverr link can be added later -->
                     <a href="#" class="btn btn-primary">
                         Hire Me on Fiverr
                     </a>
 
-                    <a href="mailto:your@email.com"
+                    <a href="mailto:ay6633404@gmail.com"
                        class="btn btn-outline">
                         Email Me
                     </a>
@@ -947,8 +877,8 @@
                 <div class="contact-info">
 
                     Email:
-                    <a href="mailto:your@email.com">
-                        your@email.com
+                    <a href="mailto:ay6633404@gmail.com">
+                        ay6633404@gmail.com
                     </a>
 
                 </div>
@@ -960,10 +890,7 @@
     </section>
 
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
-
+    <!-- FOOTER -->
     <footer>
 
         <div class="container">
@@ -972,45 +899,13 @@
 
             <br>
 
-            <span>WordPress Web Designer</span>
+            <span>WordPress Web Designer | Digital Marketer</span>
 
         </div>
 
     </footer>
 
 
-    <!-- =========================
-         JAVASCRIPT
-    ========================= -->
-
-    <script>
-
-        // Simple scroll effect
-
-        document.querySelectorAll('a[href^="#"]').forEach(link => {
-
-            link.addEventListener('click', function(e) {
-
-                const target = document.querySelector(
-                    this.getAttribute('href')
-                );
-
-                if (target) {
-
-                    e.preventDefault();
-
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-
-                }
-
-            });
-
-        });
-
-    </script>
-
-
 </body>
 </html>
+```
